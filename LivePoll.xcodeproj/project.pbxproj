@@ -8,17 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		065916CF2C0E3BC400B9E103 /* LivePollApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065916CE2C0E3BC400B9E103 /* LivePollApp.swift */; };
-		065916D12C0E3BC400B9E103 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065916D02C0E3BC400B9E103 /* ContentView.swift */; };
 		065916D32C0E3BC500B9E103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065916D22C0E3BC500B9E103 /* Assets.xcassets */; };
 		065916D62C0E3BC500B9E103 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065916D52C0E3BC500B9E103 /* Preview Assets.xcassets */; };
+		065916DD2C0E3EF600B9E103 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 065916DC2C0E3EF600B9E103 /* GoogleService-Info.plist */; };
+		065916E12C0E418200B9E103 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 065916E02C0E418200B9E103 /* FirebaseFirestore */; };
+		065916E52C0E418200B9E103 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 065916E42C0E418200B9E103 /* FirebaseFirestoreSwift */; };
+		065916E82C0F75D300B9E103 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065916E72C0F75D300B9E103 /* Option.swift */; };
+		065916EA2C0F773900B9E103 /* Poll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065916E92C0F773900B9E103 /* Poll.swift */; };
+		065916EF2C0F9BCB00B9E103 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065916EE2C0F9BCB00B9E103 /* HomeView.swift */; };
+		065916F22C0F9BF100B9E103 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065916F12C0F9BF100B9E103 /* HomeVM.swift */; };
+		065916F42C0FAD8600B9E103 /* PollChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065916F32C0FAD8600B9E103 /* PollChartView.swift */; };
+		065916F62C0FC05C00B9E103 /* PollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065916F52C0FC05C00B9E103 /* PollView.swift */; };
+		065916F82C0FC08100B9E103 /* PollVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065916F72C0FC08100B9E103 /* PollVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		065916CB2C0E3BC400B9E103 /* LivePoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivePoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		065916CE2C0E3BC400B9E103 /* LivePollApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePollApp.swift; sourceTree = "<group>"; };
-		065916D02C0E3BC400B9E103 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		065916D22C0E3BC500B9E103 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		065916D52C0E3BC500B9E103 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		065916DC2C0E3EF600B9E103 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		065916E72C0F75D300B9E103 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		065916E92C0F773900B9E103 /* Poll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poll.swift; sourceTree = "<group>"; };
+		065916EE2C0F9BCB00B9E103 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		065916F12C0F9BF100B9E103 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		065916F32C0FAD8600B9E103 /* PollChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollChartView.swift; sourceTree = "<group>"; };
+		065916F52C0FC05C00B9E103 /* PollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollView.swift; sourceTree = "<group>"; };
+		065916F72C0FC08100B9E103 /* PollVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065916E12C0E418200B9E103 /* FirebaseFirestore in Frameworks */,
+				065916E52C0E418200B9E103 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +55,7 @@
 			children = (
 				065916CD2C0E3BC400B9E103 /* LivePoll */,
 				065916CC2C0E3BC400B9E103 /* Products */,
+				065916DF2C0E418200B9E103 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +70,11 @@
 		065916CD2C0E3BC400B9E103 /* LivePoll */ = {
 			isa = PBXGroup;
 			children = (
+				065916F02C0F9BDB00B9E103 /* Observables */,
+				065916EB2C0F9BA600B9E103 /* Views */,
+				065916E62C0F75B600B9E103 /* Models */,
+				065916DC2C0E3EF600B9E103 /* GoogleService-Info.plist */,
 				065916CE2C0E3BC400B9E103 /* LivePollApp.swift */,
-				065916D02C0E3BC400B9E103 /* ContentView.swift */,
 				065916D22C0E3BC500B9E103 /* Assets.xcassets */,
 				065916D42C0E3BC500B9E103 /* Preview Content */,
 			);
@@ -65,6 +87,41 @@
 				065916D52C0E3BC500B9E103 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		065916DF2C0E418200B9E103 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		065916E62C0F75B600B9E103 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				065916E72C0F75D300B9E103 /* Option.swift */,
+				065916E92C0F773900B9E103 /* Poll.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		065916EB2C0F9BA600B9E103 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				065916EE2C0F9BCB00B9E103 /* HomeView.swift */,
+				065916F32C0FAD8600B9E103 /* PollChartView.swift */,
+				065916F52C0FC05C00B9E103 /* PollView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		065916F02C0F9BDB00B9E103 /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+				065916F12C0F9BF100B9E103 /* HomeVM.swift */,
+				065916F72C0FC08100B9E103 /* PollVM.swift */,
+			);
+			path = Observables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +140,10 @@
 			dependencies = (
 			);
 			name = LivePoll;
+			packageProductDependencies = (
+				065916E02C0E418200B9E103 /* FirebaseFirestore */,
+				065916E42C0E418200B9E103 /* FirebaseFirestoreSwift */,
+			);
 			productName = LivePoll;
 			productReference = 065916CB2C0E3BC400B9E103 /* LivePoll.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +172,9 @@
 				Base,
 			);
 			mainGroup = 065916C22C0E3BC400B9E103;
+			packageReferences = (
+				065916DE2C0E415300B9E103 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 065916CC2C0E3BC400B9E103 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +191,7 @@
 			files = (
 				065916D62C0E3BC500B9E103 /* Preview Assets.xcassets in Resources */,
 				065916D32C0E3BC500B9E103 /* Assets.xcassets in Resources */,
+				065916DD2C0E3EF600B9E103 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				065916D12C0E3BC400B9E103 /* ContentView.swift in Sources */,
+				065916EA2C0F773900B9E103 /* Poll.swift in Sources */,
+				065916F82C0FC08100B9E103 /* PollVM.swift in Sources */,
+				065916E82C0F75D300B9E103 /* Option.swift in Sources */,
+				065916F22C0F9BF100B9E103 /* HomeVM.swift in Sources */,
+				065916F62C0FC05C00B9E103 /* PollView.swift in Sources */,
+				065916F42C0FAD8600B9E103 /* PollChartView.swift in Sources */,
+				065916EF2C0F9BCB00B9E103 /* HomeView.swift in Sources */,
 				065916CF2C0E3BC400B9E103 /* LivePollApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +413,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		065916DE2C0E415300B9E103 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.27.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		065916E02C0E418200B9E103 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 065916DE2C0E415300B9E103 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		065916E42C0E418200B9E103 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 065916DE2C0E415300B9E103 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 065916C32C0E3BC400B9E103 /* Project object */;
 }

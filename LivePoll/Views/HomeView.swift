@@ -29,7 +29,7 @@ struct HomeView: View {
                 PollView(vm: .init(pollId: id))
             }
         }
-        .navigationTitle("XCA LivePolls")
+        .navigationTitle("LivePolls")
         .onAppear {
             vm.listenToLivePolls()
         }

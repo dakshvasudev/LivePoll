@@ -18,6 +18,7 @@ class PollViewModel {
     let pollId: String
     
     var poll: Poll? = nil
+    var activity: Activity<LivePollsWidgetAttributes>? = nil
     
     init(pollId: String, poll: Poll? = nil) {
         self.pollId = pollId
@@ -34,6 +35,7 @@ class PollViewModel {
                     withAnimation {
                         self.poll = poll
                     }
+                    self.startActivityIfNeeded()
                 } catch {
                     print("Failed to fetch poll")
                 }
@@ -53,4 +55,39 @@ class PollViewModel {
             }
         
     }
+    
+    func startActivityIfNeeded() {
+        guard let poll = self.poll, activity == nil, ActivityAuthorizationInfo().frequentPushesEnabled else { return }
+        if let currentPollIdActivity = Activity<LivePollsWidgetAttributes>.activities.first(where: { activity in activity.attributes.pollId == pollId }) {
+            self.activity = currentPollIdActivity
+        } else {
+            do {
+                let activityAttributes = LivePollsWidgetAttributes(pollId: pollId)
+                let activityContent = ActivityContent(state: poll, staleDate: Calendar.current.date(byAdding: .hour, value: 8, to: Date())!)
+                activity = try Activity.request(attributes: activityAttributes, content: activityContent, pushType: .token)
+                print("Requested a live activity \(String(describing: activity?.id))")
+            } catch {
+                print("Error requesting live activity \(error.localizedDescription)")
+            }
+        }
+        
+        let deviceId = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
+        Task {
+            guard let activity else { return }
+            for try await token in activity.pushTokenUpdates {
+                let tokenParts = token.map { data in String(format: "%02.2hhx", data) }
+                let token = tokenParts.joined()
+                print("Live activity token updated: \(token)")
+                
+                do {
+                    try await db.collection("polls/\(pollId)/push_tokens")
+                        .document(deviceId)
+                        .setData([ "token": token ])
+                } catch {
+                    print("failed to update token: \(error.localizedDescription)")
+                }
+            }
+        }
+    }
+    
 }
